@@ -12,6 +12,7 @@
 		8032E0452ABAC0CF004C60DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8032E0442ABAC0CF004C60DB /* ViewController.swift */; };
 		8032E04A2ABAC0D0004C60DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8032E0492ABAC0D0004C60DB /* Assets.xcassets */; };
 		8032E04D2ABAC0D0004C60DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8032E04B2ABAC0D0004C60DB /* LaunchScreen.storyboard */; };
+		8032E0552ABAC43F004C60DB /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8032E0542ABAC43F004C60DB /* PasswordTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8032E0492ABAC0D0004C60DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8032E04C2ABAC0D0004C60DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8032E04E2ABAC0D0004C60DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8032E0542ABAC43F004C60DB /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				8032E0402ABAC0CF004C60DB /* AppDelegate.swift */,
 				8032E0422ABAC0CF004C60DB /* SceneDelegate.swift */,
 				8032E0442ABAC0CF004C60DB /* ViewController.swift */,
+				8032E0542ABAC43F004C60DB /* PasswordTextField.swift */,
 				8032E0492ABAC0D0004C60DB /* Assets.xcassets */,
 				8032E04B2ABAC0D0004C60DB /* LaunchScreen.storyboard */,
 				8032E04E2ABAC0D0004C60DB /* Info.plist */,
@@ -136,6 +139,7 @@
 			files = (
 				8032E0452ABAC0CF004C60DB /* ViewController.swift in Sources */,
 				8032E0412ABAC0CF004C60DB /* AppDelegate.swift in Sources */,
+				8032E0552ABAC43F004C60DB /* PasswordTextField.swift in Sources */,
 				8032E0432ABAC0CF004C60DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
