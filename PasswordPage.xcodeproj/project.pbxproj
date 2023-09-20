@@ -14,6 +14,7 @@
 		8032E04D2ABAC0D0004C60DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8032E04B2ABAC0D0004C60DB /* LaunchScreen.storyboard */; };
 		8032E0552ABAC43F004C60DB /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8032E0542ABAC43F004C60DB /* PasswordTextField.swift */; };
 		8032E0582ABAD826004C60DB /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8032E0572ABAD826004C60DB /* PasswordCriteriaView.swift */; };
+		8032E05A2ABAEE50004C60DB /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8032E0592ABAEE50004C60DB /* PasswordStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8032E04E2ABAC0D0004C60DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8032E0542ABAC43F004C60DB /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		8032E0572ABAD826004C60DB /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
+		8032E0592ABAEE50004C60DB /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				8032E0572ABAD826004C60DB /* PasswordCriteriaView.swift */,
+				8032E0592ABAEE50004C60DB /* PasswordStatusView.swift */,
 			);
 			path = PasswordStatusView;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				8032E0452ABAC0CF004C60DB /* ViewController.swift in Sources */,
 				8032E0412ABAC0CF004C60DB /* AppDelegate.swift in Sources */,
 				8032E0582ABAD826004C60DB /* PasswordCriteriaView.swift in Sources */,
+				8032E05A2ABAEE50004C60DB /* PasswordStatusView.swift in Sources */,
 				8032E0552ABAC43F004C60DB /* PasswordTextField.swift in Sources */,
 				8032E0432ABAC0CF004C60DB /* SceneDelegate.swift in Sources */,
 			);
