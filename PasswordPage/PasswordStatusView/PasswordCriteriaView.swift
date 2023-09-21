@@ -60,14 +60,14 @@ extension PasswordCriteriaView {
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(systemName: "circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
-            
+        
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .subheadline)
         label.textColor = .secondaryLabel
     }
     
     private func layout() {
-    
+        
         stackView.addArrangedSubview(imageView)
         stackView.addArrangedSubview(label)
         

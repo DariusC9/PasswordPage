@@ -17,7 +17,7 @@ class PasswordStatusView: UIView {
     let digitCriteriaView = PasswordCriteriaView(text: "digit (0-9)")
     let specialCharacterCriteriaView = PasswordCriteriaView(text: "special character (e.g. !@#$%^)")
     
-    private var shouldResetCriteria: Bool = true
+    var shouldResetCriteria: Bool = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,7 +58,7 @@ extension PasswordStatusView {
     }
     
     func layout() {
-
+        
         stackView.addArrangedSubview(lengthCriteriaView)
         stackView.addArrangedSubview(criteriaLabel)
         stackView.addArrangedSubview(uppercaseCriteriaView)
@@ -82,14 +82,46 @@ extension PasswordStatusView {
         let lowercaseMet = PasswordCriteria.lowercaseMet(text)
         let digitMet = PasswordCriteria.digitMet(text)
         let specialCharacterMet = PasswordCriteria.specialCharacterMet(text)
-
+        
         if shouldResetCriteria {
             lengthAndNoSpaceMet ? lengthCriteriaView.isCriteriaMet = true : lengthCriteriaView.reset()
             uppercaseMet ? uppercaseCriteriaView.isCriteriaMet = true : uppercaseCriteriaView.reset()
             lowercaseMet ? lowerCaseCriteriaView.isCriteriaMet = true : lowerCaseCriteriaView.reset()
             digitMet ? digitCriteriaView.isCriteriaMet = true : digitCriteriaView.reset()
             specialCharacterMet ? specialCharacterCriteriaView.isCriteriaMet = true : specialCharacterCriteriaView.reset()
+        } else {
+
+            lengthCriteriaView.isCriteriaMet = lengthAndNoSpaceMet
+            uppercaseCriteriaView.isCriteriaMet = uppercaseMet
+            lowerCaseCriteriaView.isCriteriaMet = lowercaseMet
+            digitCriteriaView.isCriteriaMet = digitMet
+            specialCharacterCriteriaView.isCriteriaMet = specialCharacterMet
         }
+    }
+    
+    func validate(_ text: String) -> Bool {
+        let uppercaseMet = PasswordCriteria.uppercaseMet(text)
+        let lowercaseMet = PasswordCriteria.lowercaseMet(text)
+        let digitMet = PasswordCriteria.digitMet(text)
+        let specialCharacterMet = PasswordCriteria.specialCharacterMet(text)
+
+        let checkable = [uppercaseMet, lowercaseMet, digitMet, specialCharacterMet]
+        let metCriteria = checkable.filter { $0 }
+        let lenghtAndNoSpaceMet = PasswordCriteria.lengthAndNoSpaceMet(text)
+        
+        if lenghtAndNoSpaceMet && metCriteria.count >= 3 {
+            return true 
+        }
+        
+        return false
+    }
+    
+    func reset() {
+        lengthCriteriaView.reset()
+        uppercaseCriteriaView.reset()
+        lowerCaseCriteriaView.reset()
+        digitCriteriaView.reset()
+        specialCharacterCriteriaView.reset()
         
     }
     
@@ -101,11 +133,11 @@ extension PasswordStatusView {
         var boldTextAttributes = [NSAttributedString.Key: AnyObject]()
         boldTextAttributes[.foregroundColor] = UIColor.label
         boldTextAttributes[.font] = UIFont.preferredFont(forTextStyle: .subheadline)
-
+        
         let attrText = NSMutableAttributedString(string: "Use at least ", attributes: plainTextAttributes)
         attrText.append(NSAttributedString(string: "3 of these 4 ", attributes: boldTextAttributes))
         attrText.append(NSAttributedString(string: "criteria when setting your password:", attributes: plainTextAttributes))
-
+        
         return attrText
     }
 }
